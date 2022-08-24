@@ -11,6 +11,7 @@ pipeline {
 			steps {
 				git url:  'https://github.com/felipevbrito/docker-study.git', branch: 'main'
 			}
+        }
         stage('Docker Push Image') {
 			steps {
                 script {
@@ -19,6 +20,6 @@ pipeline {
                 }
 			}
 		}
-	}
+    }
 }
 
