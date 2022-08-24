@@ -12,7 +12,7 @@ pipeline {
 				git url:  'https://github.com/felipevbrito/docker-study.git', branch: 'main'
 			}
         }
-        stage('Github Push in Promox') {
+        stage('Github Push in Promox2') {
 			steps {
                 script {
                     sh 'ssh sgt@192.168.15.215', 'sgt_promox'
