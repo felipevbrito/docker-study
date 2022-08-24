@@ -15,7 +15,7 @@ pipeline {
         stage('Github Push in Promox2') {
 			steps {
                 script {
-                    sh 'ssh sgt@192.168.15.215', 'sgt_promox'
+                    sh 'ssh sgt@192.168.15.215'
                     //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
                     //dockerapp.push('latest')
                 }
