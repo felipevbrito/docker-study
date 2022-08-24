@@ -12,11 +12,12 @@ pipeline {
 				git url:  'https://github.com/felipevbrito/docker-study.git', branch: 'main'
 			}
         }
-        stage('Docker Push Image') {
+        stage('Github Push in Promox') {
 			steps {
                 script {
-                    docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
-                    dockerapp.push('latest')
+                    sh 'ssh sgt@192.168.15.215', 'sgt_promox'
+                    //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
+                    //dockerapp.push('latest')
                 }
 			}
 		}
