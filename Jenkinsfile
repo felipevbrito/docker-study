@@ -14,15 +14,15 @@ pipeline {
         }
         stage('Github Push in Promox2') {
 			steps {
-                script {
                     sshagent(credentials:['2021@Sgt']){
+                    sh 'ssh sgt@192.168.15.215'
+                    }
+                script {
                     sh 'ls'
                     sh 'pwd'
-                    sh 'ssh sgt@192.168.15.215'
                     //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
                     //dockerapp.push('latest')
                     }
-                }
 			}
 		}
     }
