@@ -15,8 +15,6 @@ pipeline {
         }
         stage('Msg no terminal') {
 			steps {
-                    //sshagent(credentials:['2021@Sgt']){
-                    //sh 'ssh sgt@192.168.15.215'
                 script {
                     sh 'ls'
                     sh 'pwd'
