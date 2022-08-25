@@ -14,9 +14,8 @@ pipeline {
         }
         stage('Github Push in Promox2') {
 			steps {
-                    sshagent(credentials:['2021@Sgt']){
-                    sh 'ssh sgt@192.168.15.215'
-                    }
+                    //sshagent(credentials:['2021@Sgt']){
+                    //sh 'ssh sgt@192.168.15.215'
                 script {
                     sh 'ls'
                     sh 'pwd'
