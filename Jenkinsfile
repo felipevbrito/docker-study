@@ -19,7 +19,6 @@ pipeline {
                     sh 'ls'
 		    sh 'mkdir Hello_world'
 		    sh 'pwd'
-                    //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
                     //dockerapp.push('latest')
                     }
 			}
