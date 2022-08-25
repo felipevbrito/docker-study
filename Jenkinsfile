@@ -2,17 +2,18 @@ pipeline {
 	agent any
 
 	stages {
-		stage('Inicial') {
+		stage('Inicio') {
 			steps {
 				echo 'Teste de pipeline'
 			}
 		}
-        stage('Get Source') {
+        stage('Puxando do Git') {
 			steps {
-				git url:  'https://github.com/felipevbrito/docker-study.git', branch: 'main'
+				git url:  'https://github.com/felipevbrito/docker-study.git', 
+				branch: 'main'
 			}
         }
-        stage('Github Push in Promox2') {
+        stage('Msg no terminal') {
 			steps {
                     //sshagent(credentials:['2021@Sgt']){
                     //sh 'ssh sgt@192.168.15.215'
