@@ -15,7 +15,7 @@ pipeline {
         stage('Github Push in Promox2') {
 			steps {
                 script {
-                    echo 'Hello World'
+                    sh mkdir 'Hello World'
                     //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
                     //dockerapp.push('latest')
                 }
