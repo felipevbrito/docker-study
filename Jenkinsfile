@@ -21,6 +21,7 @@ pipeline {
                     sh 'ssh sgt@192.168.15.215'
                     //docker.withRegistry('192.168.15.215:8084', 'sgt_promox')
                     //dockerapp.push('latest')
+                    }
                 }
 			}
 		}
