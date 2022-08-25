@@ -1,0 +1,15 @@
+version: '3.5'
+services:
+    jenkins:
+          image: jenkins/jenkins:lts-jdk11
+          restart: always
+          environment:
+            JAVA_OPTS: "-Djava.awt.headless=true -Xmx512m -Xms512m -Djava.util.logging.config.file=/var/jenkins_home/log.properties"
+          ports:
+              - "8080:8080"
+              - "50000:50000"
+          volumes:
+              - jenkins_data:/var/jenkins_home
+volumes:
+    jenkins_data:
+
